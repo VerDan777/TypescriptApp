@@ -1,0 +1,78 @@
+
+<body>
+<div class="row">
+  <div class="container">
+    <div class="col-sm-3">
+       <h1 class="title">{{name}}</h1>
+    </div>
+    <div class="col-sm-3">
+       <h1 class="email">{{lname}}</h1>
+    </div>
+       <div class="col-sm-3">
+       <h1 class="address">{{address.street}}</h1>
+    </div>
+      <div class="col-sm-3">
+       <h1 class="address">{{address.city}}</h1>
+    </div>
+     
+    </div>
+</div>
+<div class="row">
+  <div class="container">
+    <div class="col-sm-12">
+       <a href="#" class="input " (click)="Change()">Click</a>
+    </div>
+       <div class="col-sm-4">
+       <input type="text" placeholder="enter" (onSubmit)="Change(text)">
+    </div>
+    </div>
+ 
+
+</div>
+<div class="row">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="hob text-center">{{hobbies}}</div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <div class="col-sm-12">
+      <div *ngIf="showhobies">
+      <ul> 
+        <li *ngFor="let hobby of hobbies">{{hobby}}</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <button class="button" (click)=" toogleHobbies()">{{showHobbies ? "Hide Hobbies" : "Show Hobbies"}}</button>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <div class="col-sm-2">
+      <form>
+        <label>Name:{{name}}</label>
+        <input type="text" [(ngModel)]="name" name="name"/>
+        </form>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="container">
+    <div class="col-sm-2">
+      <form (submit)="addhobby(value)">
+        <label>Edit Hobby</label>
+        <input type="text" #hobby/>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+</body> 

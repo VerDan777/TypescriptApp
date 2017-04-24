@@ -17,6 +17,10 @@ color: black;
     width: 70px;
     padding: 0px 0px;
     color:red;
-
-
+}
+.address {
+    color:red;
+} 
+.hob {
+    background-color:yellow; 
 }
