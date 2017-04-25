@@ -11,8 +11,6 @@ export class AppComponent {
    console.log('works!!');
 
   }
-constructor() {
-  console.log("run");
-}
+
 }
 
